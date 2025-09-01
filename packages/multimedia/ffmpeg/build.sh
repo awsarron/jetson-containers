@@ -97,6 +97,7 @@ cmake -G "Unix Makefiles" \
 make -j$(nproc)
 make install
 
+export PKG_CONFIG_PATH=${DIST}/lib/pkgconfig:${PKG_CONFIG_PATH}
 pkg-config --modversion aom
 pkg-config --modversion SvtAv1Enc
 
